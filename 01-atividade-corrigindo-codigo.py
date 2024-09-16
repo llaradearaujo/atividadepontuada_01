@@ -47,8 +47,6 @@ media_pares = soma_pares / quantidade_pares
 media_impares = soma_impares / quantidade_impares 
 media_geral = soma_geral / 5
 
-# Mostrando números na ordem inversa
-numeros_invertidos = reversed(todos_numeros)
 
 # Imprimindo as estatísticas
 print("\nEstatísticas dos números:")
@@ -62,6 +60,8 @@ print(f"Menor número: {menor_numero}")
 print(f"Média dos números pares: {media_pares:.2f}")
 print(f"Média dos números ímpares: {media_impares:.2f}")
 print(f"Média de todos os números: {media_geral:.2f}")
+
+# Mostrando números na ordem inversa
 print(f"Ordem invertida dos numeros:")
 for numero in reversed(todos_numeros):
     print(numero)
