@@ -1,7 +1,7 @@
 import os
 os.system("cls || clear")
 
-# Variáveis para armazenar as estatísticas
+#variáveis para armazenar as estatísticas
 quantidade_numeros = 0
 quantidade_pares = 0
 quantidade_impares = 0
@@ -12,6 +12,7 @@ menor_numero = 0
 todos_pares = []
 todos_impares = []
 todos_numeros = []
+numeros_invertidos = []
 
 #armazenando e processando cada número
 for i in range(5):
@@ -42,13 +43,25 @@ soma_pares = sum(todos_pares)
 soma_impares = sum(todos_impares)
 
 
-# Calculando as médias
-media_pares = soma_pares / quantidade_pares 
-media_impares = soma_impares / quantidade_impares 
+#calculando as médias
+if quantidade_pares > 0:
+    media_pares = soma_pares / quantidade_pares 
+else: 
+    media_pares = 0 
+
+if quantidade_impares > 0:
+    media_impares = soma_impares / quantidade_impares
+else:
+    media_impares = 0
+    
 media_geral = soma_geral / 5
 
+#guardando numeros na ordem inversa
+for numero in reversed(todos_numeros):
+    numeros_invertidos.append(numero)
 
-# Imprimindo as estatísticas
+
+#imprimindo as estatísticas
 print("\nEstatísticas dos números:")
 print(f"Quantidade de números inseridos: {quantidade_numeros}")
 print(f"Quantidade de pares: {quantidade_pares}")
@@ -60,8 +73,4 @@ print(f"Menor número: {menor_numero}")
 print(f"Média dos números pares: {media_pares:.2f}")
 print(f"Média dos números ímpares: {media_impares:.2f}")
 print(f"Média de todos os números: {media_geral:.2f}")
-
-# Mostrando números na ordem inversa
-print(f"Ordem invertida dos numeros:")
-for numero in reversed(todos_numeros):
-    print(numero)
+print(f"Ordem invertida dos numeros: {numeros_invertidos}")
